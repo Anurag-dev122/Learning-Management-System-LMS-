@@ -1,13 +1,17 @@
 {
   "name": "learning-management-system-lms",
   "version": "1.0.0",
-  "description": "A comprehensive Learning Management System built in Node.js, SQLite, and vanilla web technologies.",
+  "description": "A comprehensive Learning Management System built in Node.js, SQLite, and React.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
+    "server": "node server.js",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"node server.js\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client"
   },
   "dependencies": {
+    "concurrently": "^8.2.2",
     "express": "^4.19.2",
     "multer": "^1.4.5-lts.1",
     "sqlite3": "^5.1.7"
