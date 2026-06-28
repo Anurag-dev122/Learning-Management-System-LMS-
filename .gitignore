@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Local databases
+*.db
+*.db-journal
+
+# Uploaded student assignments
+uploads/
+
+# OS files
+.DS_Store
+Thumbs.db
